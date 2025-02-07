@@ -13,8 +13,29 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   height: 50px;
   nav {
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     ul {
+      width: 100%;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #be0909;
+          transition: all .3s linear;
+          &:hover {
+            color: #1257df;
+          }
+        }
+      }
     }
   }
 }
