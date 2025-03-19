@@ -33,27 +33,24 @@
   <main class="general">
     <form class="general__form">
       <div>
-        <label for="name-register">Nombre</label>
+        <label for="name-register">Nombre completo</label>
         <input id="name-register" type="text" maxlength="1000">
       </div>
       <div>
-        <label for="lastname-register">Apellido</label>
-        <input id="lastname-register" type="text">
+        <label for="user-register">user</label>
+        <input id="user-register" type="text">
       </div>
       <div>
-        <label for="email-register">Correo</label>
+        <label for="email-register">Email</label>
         <input id="email-register" type="email">
-      </div>
-      <div>
-        <label for="cell-register">Celular</label>
-        <input id="cell-register" type="text">
       </div>
       <div>
         <label for="password-register">Contraseña</label>
         <input id="password-register" type="password">
       </div>
-      <button type="submit" onclick="">Enviar</button>
+      <button type="submit" onclick="onSaveInfo()">Enviar</button>
     </form>
   </main>
+  <script src="./register.js"></script>
 </body>
 </html>

@@ -53,30 +53,39 @@ body {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    display: flex;
-    gap: 30px;
-    aside {
-      width: 30%;
+    .principal__content--items {
+      width: 100%;
       display: flex;
-      flex-direction: column;
-    }
-    section {
-      width: 70%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       gap: 10px;
-      a {
-        padding: 10px;
-        margin: 5px;
-        text-decoration: none;
-        color: white;
-        background: green;
-        border-radius: 10px;
-        transition: all .3s linear;
-        &:hover {
-          background: rgb(1, 104, 1);
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .principal__content--items-item {
+        width: 320px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        display: flex;
+        flex-direction: column;
+        background: #bababa;
+        .title {
+          font-size: 25px;
+          font-weight: bold;
+          text-align: center;
+        }
+        .description {
+          font-size: 14px;
+          font-weight: 500;
+        }
+        .stock {
+          color: red;
+          font-weight: 600;
+          font-size: 18px;
+        }
+        .value {
+          text-align: center;
+          color: green;
+          font-weight: bold;
+          font-size: 18px;
         }
       }
     }

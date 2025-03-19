@@ -4,7 +4,6 @@
   align-items: center;
   position: relative;
   .general__form {
-    height: 80dvh;
     display: flex;
     flex-direction: column;
     width: 95%;
