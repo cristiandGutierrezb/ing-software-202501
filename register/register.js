@@ -1,7 +1,7 @@
 const url = 'http://localhost:3333/api/v1'
 
-const onSaveInfo = async () => {
-
+const onSaveInfo = async (e) => {
+  e.preventDefault()
   const fullname = document.getElementById('name-register').value
   const user = document.getElementById('user-register').value
   const email = document.getElementById('email-register').value
@@ -17,6 +17,7 @@ const onSaveInfo = async () => {
   await fetch(`${url}/user/create`, {
     method: 'POST',
     headers: {
+      'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(body) 
@@ -28,3 +29,7 @@ const onSaveInfo = async () => {
   .catch(e => console.error(e))
 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("form").addEventListener("submit", onSaveInfo);
+});
