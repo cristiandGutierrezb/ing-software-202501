@@ -12,18 +12,27 @@ const onLogin = async (e) => {
   await fetch('http://localhost:3333/api/v1/user', {
     method: 'POST',
     headers: {
-      'Content-type': 'application/json'
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify(body)
   })
-  .then(data = data.json())
+  .then(data => data.json())
   .then(data => {
-    console.log('finaliznado servicio de login');
+    const { infoUser } = data
+    const toPaint = document.getElementById('toPaint')
+    if (infoUser.profile_id === 'user') {
+      toPaint.innerText = 'Este es un usuario normal'
+    }
+    if (infoUser.profile_id === 'admin') {
+      toPaint.innerText = 'Este es un usuario Administrador sayayin'
+    }
+
   })
+  .catch((e) => console.log(e))
 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('form')
-  form.addEventListener('submit', onLogin)
+  document.getElementById('form').addEventListener('submit', onLogin)
 })
